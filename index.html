@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prexia - 日本の持続的成長の土台を創る。企業の成長の土台を整え、未来を加速させます。">
+    <title>Prexia - 日本の持続的成長の土台を創る</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="jquery.inview.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- ヘッダー・ナビゲーション -->
+    <header id="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="images/Prexia_logo_yoko.png" alt="Prexia">
+            </a>
+        </h1>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="navi">
+            <ul class="menu">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#people">PEOPLE</a></li>
+                <li><a href="#company">COMPANY</a></li>
+                <li class="menu-contact"><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="mask"></div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">日本の持続的成長の土台を創る</h2>
+                </div>
+            </div>
+            <div class="scroll-indicator">SCROLL DOWN</div>
+        </section>
+
+        <!-- ABOUTセクション：設立の想い -->
+        <section id="about" class="section about-section fadein">
+            <div class="container">
+                <h2 class="section-title">ABOUT</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>日本経済の基盤を支えるのは<br>大企業だけでなく、各地域にある中小企業であると考えてます。</h3>
+                    <p>昨今、人口減少・地域の過疎化、都市部への集中による雇用・教育機会の減少、インフラ・地域経済の老朽化、地域企業の後継者・成長機会の不足などの中小企業に対して、多くの課題が発生しています。</p>
+                    <p>このままでは、日本経済の「持続的成長」は困難になるという課題感を持っています。</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/About_1.jpeg" alt="日本の中小企業">
+                </div>
+            </div>
+            <div class="about-mission">
+                <div class="mission-image">
+                    <img src="images/About_2.jpeg" alt="企業の成長を支える">
+                </div>
+                <div class="mission-text">
+                    <h3>私たちは、「企業の成長の土台を整え、未来を加速させる」ためにPrexiaを設立しました。</h3>
+                    <p>日本企業の「長期的で持続的な成長」を支えること。</p>
+                    <p>その結果、日本全体が成長し続ける社会をつくること。これがPrexiaの使命です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- SERVICESセクション -->
+        <section id="services" class="section services-section fadein">
+            <div class="container">
+                <h2 class="section-title">SERVICES</h2>
+            <div class="services-grid">
+                <!-- 経営支援 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <p class="service-label">Management</p>
+                        <h3>経営支援</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>企業・事業分析</li>
+                        <li>事業・販売戦略の策定、実行支援</li>
+                        <li>中期経営計画の策定</li>
+                    </ul>
+                </div>
+
+                <!-- 会計・財務・税務 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <p class="service-label">Accounting</p>
+                        <h3>会計・財務・税務</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>バックオフィスの体制構築、運営</li>
+                        <li>資金調達（融資、補助金、外部の第三者）</li>
+                        <li>資金管理</li>
+                        <li>経理・支払業務の代行</li>
+                    </ul>
+                </div>
+
+                <!-- M&A・事業承継 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <p class="service-label">M&A/Business succession</p>
+                        <h3>M&A・事業承継</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>M&Aのスキーム作成</li>
+                        <li>財務DD、税務DD</li>
+                        <li>企業価値算定</li>
+                        <li>M&A後のPMI</li>
+                    </ul>
+                </div>
+
+                <!-- IPO支援 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <p class="service-label">IPO support</p>
+                        <h3>IPO支援</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>IPOに向けた管理部門の体制構築、運営</li>
+                        <li>資本政策の策定</li>
+                        <li>SO発行支援</li>
+                    </ul>
+                </div>
+
+                <!-- ファンド業務支援 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <p class="service-label">Fund operations support</p>
+                        <h3>ファンド業務支援</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>ファンド組成業務</li>
+                        <li>ファンド管理・運営</li>
+                        <li>ファンドの投資先管理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- PEOPLEセクション：代表者 -->
+        <section id="people" class="section people-section fadein">
+            <div class="container">
+                <h2 class="section-title">PEOPLE</h2>
+            <div class="people-content">
+                <div class="people-image">
+                    <img src="images/people_yano.jpg" alt="代表 矢野真悟" class="profile-image">
+                </div>
+                <div class="people-info">
+                    <div class="info-row">
+                        <div class="info-label">氏名</div>
+                        <div class="info-value">矢野真悟</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">経歴</div>
+                        <div class="info-value">慶應義塾大学商学部卒/グロービス経営大学院卒</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">職歴</div>
+                        <div class="info-value">
+                            ・西日本シティ銀行/あずさ監査法人/ドリームインキュベータ/フォーカスパートナーズを経て、Prexia設立<br>
+                            ・矢野真悟公認会計士事務所
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">資格</div>
+                        <div class="info-value">公認会計士/税理士（登録準備中）</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">実績</div>
+                        <div class="info-value">
+                            ・あずさ監査法人では、金融事業部として大手銀行、信用金庫の監査を中心に実施。<br>
+                            ・ドリームインキュベータでは、財務・経理統括、M&A、DD、ベンチャー管理、VC設立・運営に従事<br>
+                            ・フォーカスパートナーズでは、M&A、DD、企業価値算定、上場企業の新規事業、カーブアウト、また投資先子会社の運営を実施<br>
+                            ・矢野公認会計事務所では、IPO支援業務、ファンドの設立・運営、SO設計、DD、企業価値算定など多数実施
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- COMPANYセクション：会社概要 -->
+        <section id="company" class="section company-section fadein">
+            <div class="container">
+                <h2 class="section-title">COMPANY</h2>
+            <div class="company-table">
+                <div class="table-row">
+                    <div class="table-label">会社名</div>
+                    <div class="table-value">株式会社Prexia</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-label">所在地</div>
+                    <div class="table-value">東京都品川区大井1-6-3</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-label">設立</div>
+                    <div class="table-value">2025年6月30日</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-label">代表</div>
+                    <div class="table-value">矢野真悟</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-label">資本金等</div>
+                    <div class="table-value">100万円</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-label">事業内容</div>
+                    <div class="table-value">
+                        経営/財務・経理・税務支援/バックオフィスアウトソーシング/M&A/事業承継/IPO/事業再生/DD/企業価値算定/SO設計/組織構築/ファンド組成・運営業務/EC運営業務
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- CONTACTセクション：お問い合わせ -->
+        <section id="contact" class="section contact-section fadein">
+            <div class="container">
+                <h2 class="section-title">CONTACT</h2>
+            <p class="contact-description">ご不明点やご質問などございましたら、下記のフォームからお気軽にお問い合わせください</p>
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="c4f880cd-c8ad-4608-b8c0-ce70b2a6980a">
+
+                <!-- 送信後のリダイレクト先（成功ページ） -->
+                <input type="hidden" name="redirect" value="http://localhost:8000/thank-you.html">
+
+                <!-- オプション：件名 -->
+                <input type="hidden" name="subject" value="Prexiaウェブサイトからのお問い合わせ">
+
+                <!-- オプション：送信元名 -->
+                <input type="hidden" name="from_name" value="Prexia お問い合わせフォーム">
+
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div id="form-message" class="form-message"></div>
+                <button type="submit" class="btn-submit">送信</button>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <div class="info-area">
+            <a class="logo" href="index.html">
+                <img src="images/Prexia_logo_yoko.png" alt="Prexia" class="logo-white">
+            </a>
+            <div class="info">
+                <p>〒140-0014<br>東京都品川区大井1-6-3</p>
+            </div>
+            <p class="copyright">Copyright © Prexia. All rights reserved.</p>
+        </div>
+
+        <div class="menu-area">
+            <div class="menu-col">
+                <p class="menu-title"><a href="#about">ABOUT</a></p>
+            </div>
+
+            <div class="menu-col">
+                <p class="menu-title"><a href="#services">SERVICES</a></p>
+            </div>
+
+            <div class="menu-col">
+                <p class="menu-title"><a href="#people">PEOPLE</a></p>
+            </div>
+
+            <div class="menu-col">
+                <p class="menu-title"><a href="#company">COMPANY</a></p>
+            </div>
+
+            <div class="menu-col">
+                <p class="menu-title"><a href="#contact">CONTACT</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
