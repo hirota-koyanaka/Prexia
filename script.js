@@ -54,32 +54,42 @@ $(function(){
     formMessage.text("").removeClass("error success");
 
     // フォームデータを取得
-    const formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      message: $("#message").val()
-    };
+    const name = $("#name").val();
+    const email = $("#email").val();
+    const message = $("#message").val();
 
-    // Google Apps Script Web APIに送信
-    $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbze-2ABpeZ4iEpdR183ojaUEkmdz3P-MFMsn9U2sMPpT0-yjnWpIq_zFQHUsRjs8dRTMQ/exec",
-      method: "GET",
-      data: formData,
-      dataType: "jsonp",
-      success: function(response) {
-        if (response.status === "success") {
-          // 成功ページにリダイレクト
-          window.location.href = "https://hirota-koyanaka.github.io/Prexia/thank-you.html";
-        } else {
-          formMessage.text("送信に失敗しました。もう一度お試しください。").addClass("error");
-          submitButton.prop("disabled", false).text("送信");
-        }
-      },
-      error: function() {
-        formMessage.text("送信に失敗しました。もう一度お試しください。").addClass("error");
-        submitButton.prop("disabled", false).text("送信");
-      }
-    });
+    // iframeを使ってGoogle Apps Scriptに送信
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    // フォームを動的に作成
+    const tempForm = document.createElement('form');
+    tempForm.action = 'https://script.google.com/macros/s/AKfycbze-2ABpeZ4iEpdR183ojaUEkmdz3P-MFMsn9U2sMPpT0-yjnWpIq_zFQHUsRjs8dRTMQ/exec';
+    tempForm.method = 'POST';
+    tempForm.target = 'hidden_iframe';
+
+    // フィールドを追加
+    const fields = {name: name, email: email, message: message};
+    for (let key in fields) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = fields[key];
+      tempForm.appendChild(input);
+    }
+
+    document.body.appendChild(tempForm);
+    tempForm.submit();
+
+    // 送信後の処理
+    setTimeout(function() {
+      document.body.removeChild(tempForm);
+      document.body.removeChild(iframe);
+      // 成功ページにリダイレクト
+      window.location.href = "https://hirota-koyanaka.github.io/Prexia/thank-you.html";
+    }, 1000);
   })
 
   /*-------------------------------
