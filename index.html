@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="jquery.inview.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </head>
 <body>
     <!-- ヘッダー・ナビゲーション -->
@@ -48,7 +48,7 @@
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h2 class="hero-title">日本の持続的成長の土台を創る</h2>
+                    <h2 class="hero-title">日本の持続的成長の<br class="sp-only">土台を創る</h2>
                 </div>
             </div>
         </section>
@@ -176,7 +176,7 @@
                         <div class="info-label">職歴</div>
                         <div class="info-value">
                             ・西日本シティ銀行/あずさ監査法人/ドリームインキュベータ/フォーセンスパートナーズを経て、Prexia設立<br>
-                            ・矢野慎悟公認会計士事務所
+                            ・矢野真悟公認会計士事務所
                         </div>
                     </div>
                     <div class="info-row">
@@ -189,7 +189,7 @@
                             ・あずさ監査法人では、金融事業部として大手銀行、信用金庫の監査を中心に実施。<br>
                             ・ドリームインキュベータでは、財務・経理統括、M&A、DD、ベンチャー管理、VC設立・運営に従事<br>
                             ・フォーセンスパートナーズでは、M&A、DD、企業価値算定、上場企業の新規事業、カーブアウト、また投資先子会社の運営を実施<br>
-                            ・矢野慎悟公認会計士事務所では、IPO支援業務、ファンドの設立・運営、SO設計、DD、企業価値算定など多数実施
+                            ・矢野真悟公認会計士事務所では、IPO支援業務、ファンドの設立・運営、SO設計、DD、企業価値算定など多数実施
                         </div>
                     </div>
                 </div>
@@ -237,19 +237,7 @@
             <div class="container">
                 <h2 class="section-title">CONTACT</h2>
             <p class="contact-description">ご不明点やご質問などございましたら、下記のフォームからお気軽にお問い合わせください</p>
-            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="c4f880cd-c8ad-4608-b8c0-ce70b2a6980a">
-
-                <!-- 送信後のリダイレクト先（成功ページ） -->
-                <input type="hidden" name="redirect" value="https://hirota-koyanaka.github.io/Prexia/thank-you.html">
-
-                <!-- オプション：件名 -->
-                <input type="hidden" name="subject" value="Prexiaウェブサイトからのお問い合わせ">
-
-                <!-- オプション：送信元名 -->
-                <input type="hidden" name="from_name" value="Prexia お問い合わせフォーム">
-
+            <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">お名前</label>
                     <input type="text" id="name" name="name" required>

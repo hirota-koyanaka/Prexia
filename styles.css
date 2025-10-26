@@ -39,6 +39,17 @@ main {
   padding-top: 80px;
 }
 
+/* レスポンシブ用クラス */
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sp-only {
+    display: inline;
+  }
+}
+
 /* ====================
    カラー変数
    ==================== */
