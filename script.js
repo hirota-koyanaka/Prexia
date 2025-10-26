@@ -40,10 +40,47 @@ $(function(){
   });
 
   /*-------------------------------
-  お問い合わせフォームの処理（Web3Forms）
+  お問い合わせフォームの処理（Google Forms）
   ---------------------------------*/
-  // フォームは直接送信されるため、JavaScriptでの処理は不要
-  // Web3Formsが送信を処理し、成功ページにリダイレクトします
+  $("#contactForm").submit(function(e) {
+    e.preventDefault();
+
+    const form = $(this);
+    const submitButton = form.find(".btn-submit");
+    const formMessage = $("#form-message");
+
+    // ボタンを無効化
+    submitButton.prop("disabled", true).text("送信中...");
+    formMessage.text("").removeClass("error success");
+
+    // フォームデータを取得
+    const formData = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      message: $("#message").val()
+    };
+
+    // Google Apps Script Web APIに送信
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbze-2ABpeZ4iEpdR183ojaUEkmdz3P-MFMsn9U2sMPpT0-yjnWpIq_zFQHUsRjs8dRTMQ/exec",
+      method: "GET",
+      data: formData,
+      dataType: "jsonp",
+      success: function(response) {
+        if (response.status === "success") {
+          // 成功ページにリダイレクト
+          window.location.href = "https://hirota-koyanaka.github.io/Prexia/thank-you.html";
+        } else {
+          formMessage.text("送信に失敗しました。もう一度お試しください。").addClass("error");
+          submitButton.prop("disabled", false).text("送信");
+        }
+      },
+      error: function() {
+        formMessage.text("送信に失敗しました。もう一度お試しください。").addClass("error");
+        submitButton.prop("disabled", false).text("送信");
+      }
+    });
+  })
 
   /*-------------------------------
   ヘッダーのスクロール効果
