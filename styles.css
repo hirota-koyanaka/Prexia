@@ -601,24 +601,21 @@ main {
 
 .btn-submit {
   display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 16px 40px;
-  background-color: var(--primary-color);
+  width: 100px;
+  margin: 20px auto 50px;
+  padding: 12px 0;
+  background-color: var(--text-dark);
   color: var(--white);
   border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn-submit:hover:not(:disabled) {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 139, 150, 0.3);
+  opacity: 0.7;
 }
 
 .btn-submit:disabled {
